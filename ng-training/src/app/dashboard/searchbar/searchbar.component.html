@@ -1,0 +1,11 @@
+<div class="input-group">
+    <label>
+        <input type="text" class="form-control" placeholder="Suche" [formControl]="control">
+    </label>
+</div>
+
+<div class="btn-group btn-group-toggle">
+    <label [class.btn-light]="!doneControl.value" [class.btn-info]="doneControl.value" ngbButtonLabel>
+        <input type="checkbox" ngbButton [formControl]="doneControl">Show only not done
+    </label>
+</div>

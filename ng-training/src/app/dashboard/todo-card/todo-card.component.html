@@ -1,0 +1,16 @@
+<div class="card" [appHighlight]="">
+    <h5 class="card-header">
+        <span *ngIf="todo.done">✅ Done</span>
+        {{ todo.name }}
+        <a [routerLink]="['/detail', todo.id]">
+            <button class="btn">✒</button>
+        </a>
+    </h5>
+    <div class="card-body">
+        <h5 class="card-title">{{ todo.description | upper: 'BUTT' }}</h5>
+        <a class="btn" [class.btn-success]="!todo.done" [class.btn-warning]="todo.done" (click)="todo.done = !todo.done">
+            Mark as {{ todo.done ? 'undone' : 'Done' }}
+        </a>
+        <a class="btn" (click)="remove(todo)">Delete</a>
+    </div>
+</div>

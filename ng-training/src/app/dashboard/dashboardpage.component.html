@@ -1,0 +1,6 @@
+<div class="container">
+    <app-searchbar></app-searchbar>
+    <ng-container *ngFor="let todo of todos$ | async">
+        <app-todo-card [todo]="todo"></app-todo-card>
+    </ng-container>
+</div>

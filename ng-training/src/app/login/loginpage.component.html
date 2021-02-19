@@ -1,0 +1,23 @@
+<div class="container">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group mb-3">
+            <label>
+                <input [class.is-invalid]="isSubmitted && email?.invalid" type="text" class="form-control" placeholder="E-Mail" formControlName="email">
+            </label>
+        </div>
+        <div class="input-group mb-3">
+            <label>
+                <input [class.is-invalid]="isSubmitted && code?.invalid" type="text" class="form-control" placeholder="Codewort" formControlName="code">
+            </label>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h1>Login</h1>
+                <a routerLink="/dashboard">
+                    <button type="submit">Login</button>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
